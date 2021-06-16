@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function () {
+            var employee = [
+                {
+                "firstname": "A",
+                "lastname": "Nguyen",
+                "age": 26,
+                "email": "A@gmail.com",
+                },
+                {
+                    "firstname": "B",
+                    "lastname": "Nguyen",
+                    "age": 25,
+                    "email": "B@dtn.com.vn",
+                }];
+            var key = 0;
+            var value = "";
+
+            //Cách 1
+            // $(employee).each(function () {
+            //     value += "FirstName: " + employee[key].firstname + "<br>" +
+            //         "LastName: " + employee[key].lastname + "<br>" +
+            //         "Age: " + employee[key].age + "<br>" +
+            //         "Email: " + employee[key].email + "<br>";
+            //     key++;
+            // });
+
+            //Cách 2
+            // $.each($(employee), function (i, item) {
+            //     value += "FirstName: " + item.firstname + "<br>" +
+            //         "LastName: " + item.lastname + "<br>" +
+            //         "Age: " + item.age + "<br>" +
+            //         "Email: " + item.email + "<br>" + "<br>";
+            // });
+
+            // $('#result').html(value);
+
+            // $('#result').html(
+            //     "Firstname: " + employee[0].firstname + "<br>"
+            //     + "Email: " + employee[1].email + "<br>");
+
+            //Chuyển đổi qua lại giữa JSON, String và .NET Objects
+            $('#result').html(JSON.stringify(employee));
+
+            var content = $('#result').html();
+            var objJson = JSON.parse(content);
+            console.log(objJson);
+
+        });
+    </script>
+</head>
+<body>
+<div id="result"></div>
+</body>
+</html>

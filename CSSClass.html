@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script>
+    $(function () {
+
+      //Add
+      $('#addSubmit').click(function () {
+        $('h1').addClass('color');
+      });
+      $('#addItalicSubmit').click(function () {
+        $('h1').addClass('italic');
+      });
+
+      //Remove
+      $('#removeSubmit').click(function () {
+        $('h1').removeClass('color');
+      });
+      $('#removeItalicSubmit').click(function () {
+        $('h1').removeClass('italic');
+      });
+
+      //Toggle
+      $('#toggleSubmit').on('click', function () {
+        $('h1').toggleClass('color');
+      });
+      $('#toggleItalicSubmit').on('click', function () {
+        $('h1').toggleClass('italic');
+      });
+
+      //HasClass
+      $('#hasClassColor').on('click', function () {
+        if ($('h1').hasClass('color')) {
+          alert("Has color");
+        } else {
+          alert("No color");
+        }
+      });
+      $('#hasClassItalic').on('click', function () {
+        if ($('h1').hasClass('italic')) {
+          alert("Has italic");
+        } else {
+          alert("No italic");
+        }
+      });
+    });
+  </script>
+
+  <style>
+    .color {
+      color: red;
+    }
+    .italic {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<h1>This is H1</h1>
+<br>
+<button id="addSubmit">Add color</button>
+<button id="removeSubmit">Remove color</button>
+<button id="toggleSubmit">Toggle color</button>
+<br>
+<button id="addItalicSubmit">Add Italic</button>
+<button id="removeItalicSubmit">Remove Italic</button>
+<button id="toggleItalicSubmit">Toggle Italic</button>
+<br>
+<button id="hasClassColor">Has Color</button>
+<button id="hasClassItalic">Has Italic</button>
+</body>
+</html>

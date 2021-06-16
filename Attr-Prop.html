@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      $(function () {
+         $('#btn1').click(function () {
+             // $('#spanAttr').text($('#ck1').attr('checked'));
+             // $('#spanProp').text($('#ck1').prop('checked'));
+             $('#ck1').prop('checked', false);
+         });
+         $('#btn0').click(function () {
+            $('#ck1').prop('checked', true);
+         });
+      });
+    </script>
+</head>
+<body>
+<input type="checkbox" id="ck1" value="Hello" checked="checked">
+<br>
+<div id="div0">
+    <h1>Something i just like it</h1>
+    <p>Super Hero</p>
+</div>
+<div id="div1">
+    <span id="spanProp">123</span>
+    <span id="spanAttr">321</span>
+</div>
+<br>
+<button id="btn0">On</button>
+<button id="btn1">Off</button>
+</body>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>-->
+<!--<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function () {
+            $('#submit').click(function () {
+               let selected = $('#skills option:selected');
+               if (selected.length > 0) {
+                   let result = "";
+                   selected.each(function () {
+                       result += "Value: " + $(this).val() + " Text: " + selected.text() + "<br>";
+                   });
+                   $('#divResult').html(result);
+               } else {
+                   $('#divResult').html("No selected");
+               }
+            });
+        });
+    </script>
+</head>
+<body>
+<select id="skills" multiple>
+    <option>Choose language</option>
+    <option value="C#">C#</option>
+    <option value="C++">C++</option>
+    <option value="Java">Java</option>
+    <option value="Php">Php</option>
+</select>
+<br><br>
+<input type="button" value="Submit" id="submit">
+<br><br>
+<div id="divResult"></div>
+</body>
+</html>

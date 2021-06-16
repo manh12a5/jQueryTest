@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function () {
+
+            //Each
+            // var array = [];
+            // $('li').each(function (index, element) {
+            //   array.push($(element).text());
+            // });
+            // alert(array);
+
+            //Map
+            // alert($('li').map(function (index, element) {
+            //   return $(element).text();
+            // }).get());
+
+            //Each
+            // let result = "";
+            // $('li').each(function (index,element) {
+            //   result += $(element).text() + ",";
+            // });
+            // let resultText = result.substring(0, result.length - 1);
+            // alert(resultText);
+
+            //Map
+            alert($('li').map(function (index, element) {
+                if ($(element).text() === "Php") {
+                    return $(element).text();
+                }
+            }).get().join(","));
+
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li>C#</li>
+    <li>C++</li>
+    <li>Java</li>
+    <li>Php</li>
+</ul>
+</body>
+</html>
